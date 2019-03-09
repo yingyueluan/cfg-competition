@@ -3,14 +3,41 @@ body {
   font-family: arial;
   margin: 0px;
 }
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: powderblue;
+  color: white;
+}
+/* sec1 */
 div.sec1 {
-  min-height: 50vh;
-  width: 100vw;
+  padding: 25px;
+  min-height: 70vh;
 }
 h1.sec1 {
-  margin-top: 10%;
   text-align: center;
   font-size: 1.5em;
+  font-family: 'Lobster', cursive;
+  font-weight: normal;
+  line-height: 48px;
 }
 p.sec1 {
   margin-left: 30px;
@@ -24,17 +51,19 @@ img {
   margin: 0 auto;
   border-radius: 100px;
 }
+
+/* sec2*/
 div.sec2 {
+  padding: 25px;
   background-color: powderblue;
+  min-height: 70vh;
 }
-p.sec2 {
-  margin-top: 10%;
-  width: 40%;
-  margin: 10vh 10vw;
-  font-size: 1em;
-}
-a {
-  color: rgb(0, 0, 0);
+h1.sec2 {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: 'Lobster', cursive;
+  font-weight: normal;
+  line-height: 48px;
 }
 ol {
   list-style: none;
@@ -44,34 +73,156 @@ ol {
   display: flex;
   justify-content: space-around;
 }
-li#lower {
-  margin-top: 7%;
+p.sec2 {
+  margin-left: 30px;
+  font-size: 0.75em;
+  text-align: left;
+  font-family: arial;
 }
-li#lowest {
-  margin-top: 14%;
-}
-div.contrast {
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-}
-p.yo {
-  font-style: italic;
-  font-size: 2em;
-}
-ul {
-  list-style: none;
-  display: flex;
-  text-align: center;
-}
-li {
+li.sec2 {
   margin: 0 20px;
   transition: 0.6s ease;
+  font-family: 'Lobster', cursive;
+  font-weight: normal;
+  display: inline-block;
+  text-align: center;
 }
-li:hover {
+li.sec2:hover {
   font-size: 1.2em;
   transition: 0.6s ease;
+}
+img.center {
+  display: block;
+  margin: 0 auto;
+  width: 350px;
+  height: 250px;
+}
+
+
+/* sec3 */
+div.sec3 {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 25px;
+  min-height: 70vh;
+}
+h1.sec3 {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: 'Lobster', cursive;
+  font-weight: normal;
+  line-height: 48px;
+}
+div.sec32 {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 25px;
+  min-height: 70vh;
+}
+img.image {
+  display: block;
+  margin: 0 auto;
+  width: 350px;
+  height: 250px;
+}
+p.sec3 {
+  margin-left: 100px;
+  font-size: 1em;
+  text-align: right;
+  font-family: arial;
+}
+div.sec4 {
+  padding: 25px;
+  min-height: 70vh;
+}
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: 0 auto;
+  text-align:center;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+div.sec5 {
+  padding: 25px;
 }
